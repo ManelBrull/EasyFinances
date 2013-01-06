@@ -1,15 +1,24 @@
 package manire.janel.easyfinances;
 
-import android.os.Bundle;
+
+import manire.janel.easyfinances.expensescategory.CategoriesSpinnerAdapter;
+import manire.janel.easyfinances.utils.Utils;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+import android.widget.Spinner;
 
 public class AddExpenseSimple extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		Utils.setContext(this.getApplicationContext());
+
 		setContentView(R.layout.add_expense_simple);
+		Spinner catSelector = (Spinner) findViewById(R.id.spinnercatselect);
+		catSelector.setAdapter(new CategoriesSpinnerAdapter(this.getApplicationContext(), this));
 	}
 
 	@Override

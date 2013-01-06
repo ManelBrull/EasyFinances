@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".AddExpenseSimple" >
+
+    <ImageView
+        android:id="@+id/catSpinnerImg"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/abs__ab_bottom_solid_dark_holo" />
+
+    <TextView
+        android:id="@+id/catSpinnerText"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center_vertical"
+        android:hint="@string/category"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000" />
+
+</LinearLayout>
