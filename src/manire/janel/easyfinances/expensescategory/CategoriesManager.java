@@ -24,6 +24,7 @@ public class CategoriesManager {
 
 		//if(this.categoriesManager == null) {
 			this.setCategoryList(new ArrayList<Categories>());
+			this.addCategory(new Categories(1, "Select Category"));
 			this.addCategory(new Categories(1, "Supermarket"));
 			this.addCategory(new Categories(1, "Fast-Food Meal"));
 			this.addCategory(new Categories(1, "House"));
