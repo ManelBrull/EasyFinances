@@ -3,18 +3,17 @@ package manire.janel.easyfinances;
 
 
 
-import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.Menu;
-
-
 import manire.janel.easyfinances.expensescategory.CategoriesSpinnerAdapter;
 import manire.janel.easyfinances.utils.Utils;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.ToggleButton;
+
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
 
 public class AddExpenseSimple extends SherlockActivity {
 
@@ -25,8 +24,23 @@ public class AddExpenseSimple extends SherlockActivity {
 		Utils.setContext(this.getApplicationContext());
 
 		setContentView(R.layout.add_expense_simple);
+		
+		//Ocr
+		EditText ocr = (EditText) findViewById(R.id.ocrinputfield);
+		
+		//Spinner
 		Spinner catSelector = (Spinner) findViewById(R.id.spinnercatselect);
 		catSelector.setAdapter(new CategoriesSpinnerAdapter(this.getApplicationContext(), this));
+		
+		//Quantity
+		EditText quantity = (EditText) findViewById(R.id.quantityinputfield);
+		
+		//Income_Expense
+		ToggleButton status = (ToggleButton) findViewById(R.id.income_expense_button);
+		
+		//Bottom bar
+		BottomBarButtonManager bbbm = new BottomBarButtonManager(this);
+		
 	}
 
 	@Override
