@@ -15,8 +15,6 @@
                 android:ems="10"
                 android:hint="@string/inserocr"
                 android:inputType="text" >
-
-                <requestFocus />
             </EditText>
 
             <Spinner
@@ -31,6 +29,25 @@
                 android:ems="10"
                 android:hint="@string/insertquantity"
                 android:inputType="numberDecimal" />
+
+            <ToggleButton
+                android:id="@+id/income_expense_button"
+                style="@style/EasyFinances.add_expense_simple.income_expense_button" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.46" >
+
+                <include
+                    android:id="@+id/message_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    layout="@layout/add_expense_simple_buttons_bar" />
+
+            </RelativeLayout>
 
         </LinearLayout>
 

@@ -685,10 +685,22 @@ containing a value of this type.
         public static final int abs__bright_foreground_inverse_holo_dark=0x7f060006;
         public static final int abs__bright_foreground_inverse_holo_light=0x7f060007;
         public static final int abs__holo_blue_light=0x7f060008;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f060009;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f06000a;
-        public static final int abs__primary_text_holo_dark=0x7f06000b;
-        public static final int abs__primary_text_holo_light=0x7f06000c;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f060013;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f060014;
+        public static final int abs__primary_text_holo_dark=0x7f060015;
+        public static final int abs__primary_text_holo_light=0x7f060016;
+        public static final int dark_gray=0x7f060012;
+        public static final int dark_green=0x7f06000a;
+        public static final int dark_orange=0x7f06000e;
+        public static final int dark_red=0x7f06000b;
+        public static final int gray=0x7f060010;
+        public static final int light_gray=0x7f060011;
+        public static final int light_green=0x7f06000d;
+        public static final int light_orange=0x7f06000f;
+        public static final int light_red=0x7f06000c;
+        /**   Colors 
+         */
+        public static final int red=0x7f060009;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -918,11 +930,23 @@ containing a value of this type.
         public static final int abs__textfield_searchview_right_holo_dark=0x7f02006d;
         public static final int abs__textfield_searchview_right_holo_light=0x7f02006e;
         public static final int action_settings=0x7f02006f;
-        public static final int hardware_computer=0x7f020070;
-        public static final int ic_launcher=0x7f020071;
+        public static final int bottom_bar_button_focused=0x7f020070;
+        public static final int bottom_bar_button_normal=0x7f020071;
+        public static final int bottom_bar_button_pressed=0x7f020072;
+        public static final int bottom_bar_button_selector=0x7f020073;
+        public static final int changing=0x7f020074;
+        public static final int content_discard=0x7f020075;
+        public static final int content_new=0x7f020076;
+        public static final int content_save=0x7f020077;
+        public static final int expense=0x7f020078;
+        public static final int hardware_computer=0x7f020079;
+        public static final int ic_launcher=0x7f02007a;
+        public static final int income=0x7f02007b;
+        public static final int income_expenses_toggle_button_selector=0x7f02007c;
+        public static final int selector=0x7f02007d;
     }
     public static final class id {
-        public static final int Menu_settings=0x7f040038;
+        public static final int Menu_settings=0x7f04003d;
         public static final int abs__action_bar=0x7f040022;
         public static final int abs__action_bar_container=0x7f040021;
         public static final int abs__action_bar_subtitle=0x7f040011;
@@ -963,15 +987,20 @@ containing a value of this type.
         public static final int abs__title=0x7f04001b;
         public static final int abs__titleDivider=0x7f04001c;
         public static final int abs__up=0x7f04000b;
-        public static final int catSpinnerImg=0x7f040036;
-        public static final int catSpinnerText=0x7f040037;
+        public static final int catSpinnerImg=0x7f04003b;
+        public static final int catSpinnerText=0x7f04003c;
+        public static final int clearButton=0x7f040039;
         public static final int disableHome=0x7f040009;
         public static final int edit_query=0x7f040027;
         public static final int homeAsUp=0x7f040006;
+        public static final int income_expense_button=0x7f040036;
         public static final int listMode=0x7f040002;
+        public static final int message_buttons=0x7f040037;
         public static final int normal=0x7f040001;
         public static final int ocrinputfield=0x7f040033;
+        public static final int otherButton=0x7f04003a;
         public static final int quantityinputfield=0x7f040035;
+        public static final int saveButton=0x7f040038;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
@@ -1008,9 +1037,10 @@ containing a value of this type.
         public static final int abs__search_view=0x7f030015;
         public static final int abs__simple_dropdown_hint=0x7f030016;
         public static final int add_expense_simple=0x7f030017;
-        public static final int sherlock_spinner_dropdown_item=0x7f030018;
-        public static final int sherlock_spinner_item=0x7f030019;
-        public static final int spinner_categories=0x7f03001a;
+        public static final int add_expense_simple_buttons_bar=0x7f030018;
+        public static final int sherlock_spinner_dropdown_item=0x7f030019;
+        public static final int sherlock_spinner_item=0x7f03001a;
+        public static final int spinner_categories=0x7f03001b;
     }
     public static final class menu {
         public static final int add_expense_simple=0x7f0b0000;
@@ -1100,6 +1130,12 @@ containing a value of this type.
         public static final int AppTheme=0x7f0a005a;
         public static final int DialogWindowTitle_Sherlock=0x7f0a0036;
         public static final int DialogWindowTitle_Sherlock_Light=0x7f0a0037;
+        /**   Theme for toggle button to choose if it is an income or expense 
+         */
+        public static final int EasyFinances_add_expense_simple_income_expense_button=0x7f0a005c;
+        /**   Theme for add_expenses_simple bottom button bar 
+         */
+        public static final int EasyFinances_bottom_bar_button=0x7f0a005b;
         public static final int Sherlock___TextAppearance_Small=0x7f0a004a;
         public static final int Sherlock___Theme=0x7f0a004e;
         public static final int Sherlock___Theme_DarkActionBar=0x7f0a0050;

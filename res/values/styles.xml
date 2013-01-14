@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -17,4 +17,36 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <!--  Theme for add_expenses_simple bottom button bar -->
+    <style name="EasyFinances.bottom_bar.button" parent="@style/Theme.Sherlock.NoActionBar">
+        <item name="android:background">@drawable/bottom_bar_button_selector</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/background_light</item>    
+    </style>
+    
+    <!--  Theme for toggle button to choose if it is an income or expense -->
+    <style name="EasyFinances.add_expense_simple.income_expense_button" parent="@style/Theme.Sherlock.NoActionBar">
+        <item name="android:background">@drawable/income_expenses_toggle_button_selector</item>
+  		<item name="android:layout_width">match_parent</item>
+  		<item name="android:layout_height">wrap_content</item>
+  		<item name="android:onClick">onToggleClicked</item>
+        <item name="android:textOff">Expense</item>
+        <item name="android:textOn">Income</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <!--  Colors -->
+    <color name="red">#00FF00</color>
+    <color name="dark_green">#669900</color>
+    <color name="dark_red">#CC0000</color>
+    <color name="light_red">#FF4444</color>
+    <color name="light_green">#99CC00</color>
+    <color name="dark_orange">#FF8800</color>
+    <color name="light_orange">#FFBB33</color>
+    <color name="gray">#F4F4F4</color>
+    <color name="light_gray">#55C4C4C4</color>
+    <color name="dark_gray">#55ADADAD</color>
+    
 </resources>

@@ -13,6 +13,7 @@ import manire.janel.easyfinances.utils.Utils;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Spinner;
 
 public class AddExpenseSimple extends SherlockActivity {
@@ -46,5 +47,8 @@ public class AddExpenseSimple extends SherlockActivity {
         }
     }
 
+	 public void onToggleClicked(View view) {
+		 
+	 }
 
 }
