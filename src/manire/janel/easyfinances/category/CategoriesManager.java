@@ -1,4 +1,4 @@
-package manire.janel.easyfinances.expensescategory;
+package manire.janel.easyfinances.category;
 
 import java.util.ArrayList;
 
@@ -23,35 +23,36 @@ public class CategoriesManager {
 		//this.setCategoryList((ArrayList<Categories>) Utils.getObjectFromSharedPreferences("categories"));
 
 		//if(this.categoriesManager == null) {
-			this.setCategoryList(new ArrayList<Categories>());
-			this.addCategory(new Categories(1, "Select Category"));
-			this.addCategory(new Categories(1, "Supermarket"));
-			this.addCategory(new Categories(1, "Fast-Food Meal"));
-			this.addCategory(new Categories(1, "House"));
-			this.addCategory(new Categories(1, "Car"));
-			this.addCategory(new Categories(1, "Gifts", R.drawable.hardware_computer));
+			this.setCategoryList(new ArrayList<Category>());
+			this.addCategory(new Category(1, "Uncategorized"));
+			this.addCategory(new Category(2, "Supermarket"));
+			this.addCategory(new Category(3, "Fast-Food Meal"));
+			this.addCategory(new Category(4, "House"));
+			this.addCategory(new Category(5, "Car"));
+			this.addCategory(new Category(6, "Gifts", R.drawable.hardware_computer));
 		}
 	//}
 	
 	/*		END SINGLETON		*/
 	
-	private ArrayList <Categories> categoryList;
+	private ArrayList <Category> categoryList;
 	
 	
-	public Categories getCategory(int position){
+	public Category getCategory(int position){
 		return this.categoryList.get(position);
 	}
 	
-	public void addCategory(Categories cat) {
+	public void addCategory(Category cat) {
 		this.categoryList.add(cat);
 	}
 	
-	public ArrayList <Categories> getCategoryList() {
+	public ArrayList <Category> getCategoryList() {
 		return categoryList;
 	}
 
-	public void setCategoryList(ArrayList <Categories> categoryList) {
+	public void setCategoryList(ArrayList <Category> categoryList) {
 		this.categoryList = categoryList;
 	}
-
+	
+	//in case of remove categories, we should check if conflicts with elements
 }

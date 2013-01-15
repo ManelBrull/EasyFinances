@@ -1,4 +1,4 @@
-package manire.janel.easyfinances.expensescategory;
+package manire.janel.easyfinances.category;
 
 import java.io.Serializable;
 
@@ -11,19 +11,19 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Categories implements Serializable {
+public class Category implements Serializable {
 	
 	private int id;
 	private String nombre;
 	private int img;
 	
-	public Categories(int id, String nombre)
+	public Category(int id, String nombre)
 	{
 		this.setId(id);
 		this.setNombre(nombre);
 	}
 	
-	public Categories(int id, String nombre, int img)
+	public Category(int id, String nombre, int img)
 	{
 		this.setId(id);
 		this.setNombre(nombre);
@@ -46,7 +46,7 @@ public class Categories implements Serializable {
 	@Override
 	public String toString()
 	{
-		return " " + getNombre();
+		return getNombre();
 	}
 
 	public int getId() {

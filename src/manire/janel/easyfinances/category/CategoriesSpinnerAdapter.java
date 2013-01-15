@@ -1,4 +1,4 @@
-package manire.janel.easyfinances.expensescategory;
+package manire.janel.easyfinances.category;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,11 +9,9 @@ import android.widget.SpinnerAdapter;
 
 public class CategoriesSpinnerAdapter extends BaseAdapter implements SpinnerAdapter {
 
-	private Context myContext;
 	private Activity activity;
 	
 	public CategoriesSpinnerAdapter(Context cxt, Activity act) {
-		this.myContext = cxt;
 		this.activity = act;
 	}
 	

@@ -1,11 +1,15 @@
 package manire.janel.easyfinances;
 
-import manire.janel.easyfinances.expensescategory.CategoriesSpinnerAdapter;
+import manire.janel.easyfinances.category.CategoriesSpinnerAdapter;
+import manire.janel.easyfinances.elements.ElementManager;
+import manire.janel.easyfinances.elements.Expense;
+import manire.janel.easyfinances.elements.Income;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.actionbarsherlock.app.SherlockActivity;
@@ -40,8 +44,20 @@ public class BottomBarButtonManager {
 			//Quantity
 			EditText quantity = (EditText) activity.findViewById(R.id.quantityinputfield);
 			
-			//Income_Expense
-			ToggleButton status = (ToggleButton) activity.findViewById(R.id.income_expense_button);
+			//Expense / Income
+			ToggleButton tb = (ToggleButton) activity.findViewById(R.id.income_expense_button);
+			if(tb.isChecked()) {
+				ElementManager.getElementManager().addElement(
+						new Income(ocr.getText().toString(),
+									catSelector.getFirstVisiblePosition(),
+									Float.parseFloat(quantity.getText().toString())));
+			} else {
+					ElementManager.getElementManager().addElement(
+							new Expense(ocr.getText().toString(),
+										catSelector.getFirstVisiblePosition(),
+										Float.parseFloat(quantity.getText().toString())));
+			}
+			Toast.makeText(activity.getApplicationContext(), "Saved", Toast.LENGTH_SHORT).show();
 		}
 	};
 
