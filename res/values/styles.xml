@@ -31,7 +31,6 @@
         <item name="android:background">@drawable/income_expenses_toggle_button_selector</item>
   		<item name="android:layout_width">match_parent</item>
   		<item name="android:layout_height">wrap_content</item>
-  		<item name="android:onClick">onToggleClicked</item>
         <item name="android:textOff">Expense</item>
         <item name="android:textOn">Income</item>
         <item name="android:textSize">20sp</item>

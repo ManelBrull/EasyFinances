@@ -48,9 +48,4 @@ public class AddExpenseSimple extends SherlockActivity {
                 return true;
         }
     }
-
-	 public void onToggleClicked(View view) {
-		 
-	 }
-
 }
