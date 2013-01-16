@@ -685,10 +685,10 @@ containing a value of this type.
         public static final int abs__bright_foreground_inverse_holo_dark=0x7f060006;
         public static final int abs__bright_foreground_inverse_holo_light=0x7f060007;
         public static final int abs__holo_blue_light=0x7f060008;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f060013;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f060014;
-        public static final int abs__primary_text_holo_dark=0x7f060015;
-        public static final int abs__primary_text_holo_light=0x7f060016;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f060014;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f060015;
+        public static final int abs__primary_text_holo_dark=0x7f060016;
+        public static final int abs__primary_text_holo_light=0x7f060017;
         public static final int dark_gray=0x7f060012;
         public static final int dark_green=0x7f06000a;
         public static final int dark_orange=0x7f06000e;
@@ -701,6 +701,7 @@ containing a value of this type.
         /**   Colors 
          */
         public static final int red=0x7f060009;
+        public static final int translucent=0x7f060013;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -946,7 +947,7 @@ containing a value of this type.
         public static final int selector=0x7f02007d;
     }
     public static final class id {
-        public static final int Menu_settings=0x7f04003d;
+        public static final int Menu_settings=0x7f04003f;
         public static final int abs__action_bar=0x7f040022;
         public static final int abs__action_bar_container=0x7f040021;
         public static final int abs__action_bar_subtitle=0x7f040011;
@@ -987,9 +988,11 @@ containing a value of this type.
         public static final int abs__title=0x7f04001b;
         public static final int abs__titleDivider=0x7f04001c;
         public static final int abs__up=0x7f04000b;
-        public static final int catSpinnerImg=0x7f04003b;
-        public static final int catSpinnerText=0x7f04003c;
+        public static final int catSpinnerImg=0x7f04003d;
+        public static final int catSpinnerText=0x7f04003e;
         public static final int clearButton=0x7f040039;
+        public static final int dateButton=0x7f04003a;
+        public static final int datepicker=0x7f04003b;
         public static final int disableHome=0x7f040009;
         public static final int edit_query=0x7f040027;
         public static final int homeAsUp=0x7f040006;
@@ -998,7 +1001,7 @@ containing a value of this type.
         public static final int message_buttons=0x7f040037;
         public static final int normal=0x7f040001;
         public static final int ocrinputfield=0x7f040033;
-        public static final int otherButton=0x7f04003a;
+        public static final int okbutton=0x7f04003c;
         public static final int quantityinputfield=0x7f040035;
         public static final int saveButton=0x7f040038;
         public static final int showCustom=0x7f040008;
@@ -1038,9 +1041,10 @@ containing a value of this type.
         public static final int abs__simple_dropdown_hint=0x7f030016;
         public static final int add_expense_simple=0x7f030017;
         public static final int add_expense_simple_buttons_bar=0x7f030018;
-        public static final int sherlock_spinner_dropdown_item=0x7f030019;
-        public static final int sherlock_spinner_item=0x7f03001a;
-        public static final int spinner_categories=0x7f03001b;
+        public static final int date_picker=0x7f030019;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001a;
+        public static final int sherlock_spinner_item=0x7f03001b;
+        public static final int spinner_categories=0x7f03001c;
     }
     public static final class menu {
         public static final int add_expense_simple=0x7f0b0000;
@@ -1100,6 +1104,7 @@ containing a value of this type.
         public static final int ocr=0x7f090010;
         public static final int quantity=0x7f090012;
         public static final int title_activity_add_expense_simple=0x7f090015;
+        public static final int title_activity_date_picker=0x7f090018;
     }
     public static final class style {
         /** 
@@ -1130,6 +1135,9 @@ containing a value of this type.
         public static final int AppTheme=0x7f0a005a;
         public static final int DialogWindowTitle_Sherlock=0x7f0a0036;
         public static final int DialogWindowTitle_Sherlock_Light=0x7f0a0037;
+        /**   Theme for Date picker 
+         */
+        public static final int EasyFinances_DatePicker_WindowPadding=0x7f0a005d;
         /**   Theme for toggle button to choose if it is an income or expense 
          */
         public static final int EasyFinances_add_expense_simple_income_expense_button=0x7f0a005c;

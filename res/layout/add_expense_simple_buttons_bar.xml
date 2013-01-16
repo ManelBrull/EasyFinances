@@ -36,10 +36,10 @@
             android:background="?attr/dividerVertical" />
 
         <Button
-            android:id="@+id/otherButton"
+            android:id="@+id/dateButton"
             style="@style/EasyFinances.bottom_bar.button"
             android:drawableLeft="@drawable/content_new"
-            android:text="Other" />
+            android:text="Date" />
     </LinearLayout>
 
 

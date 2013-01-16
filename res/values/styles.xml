@@ -36,6 +36,13 @@
         <item name="android:textSize">20sp</item>
     </style>
     
+    <!--  Theme for Date picker -->
+    <style name="EasyFinances.DatePicker.WindowPadding" parent="@style/Theme.Sherlock.NoActionBar">
+        <item name="android:padding">16dp</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>    
+    
+    
     <!--  Colors -->
     <color name="red">#00FF00</color>
     <color name="dark_green">#669900</color>
@@ -47,5 +54,6 @@
     <color name="gray">#F4F4F4</color>
     <color name="light_gray">#55C4C4C4</color>
     <color name="dark_gray">#55ADADAD</color>
+    <color name="translucent">#29000000</color>
     
 </resources>

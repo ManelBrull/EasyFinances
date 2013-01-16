@@ -10,5 +10,6 @@
     <string name="title_activity_add_expense_simple">AddExpenseSimple</string>
     <string name="inserocr">Insert ocr</string>
     <string name="insertquantity">Insert quantity</string>
+    <string name="title_activity_date_picker">DatePicker</string>
 
 </resources>

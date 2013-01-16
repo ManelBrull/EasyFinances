@@ -26,9 +26,7 @@ public class AddExpenseSimple extends SherlockActivity {
  		Spinner catSelector = (Spinner) findViewById(R.id.spinnercatselect);
 		catSelector.setAdapter(new CategoriesSpinnerAdapter(this.getApplicationContext(), this));
 
-		
-		new BottomBarButtonManager(this);
-		
+		new BottomBarButtonManager(this);		
 	}
 
 	@Override

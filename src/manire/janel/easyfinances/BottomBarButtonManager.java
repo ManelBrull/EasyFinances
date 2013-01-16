@@ -1,9 +1,12 @@
 package manire.janel.easyfinances;
 
-import manire.janel.easyfinances.category.CategoriesSpinnerAdapter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import manire.janel.easyfinances.elements.ElementManager;
 import manire.janel.easyfinances.elements.Expense;
 import manire.janel.easyfinances.elements.Income;
+import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -18,18 +21,18 @@ public class BottomBarButtonManager {
 	SherlockActivity activity;
 	Button save;
 	Button clear;
-	Button other;
+	Button date;
 
 	public BottomBarButtonManager(SherlockActivity act){
 		this.activity = act;
 
 		this.save = (Button) act.findViewById(R.id.saveButton);
 		this.clear = (Button) act.findViewById(R.id.clearButton);
-		this.other = (Button) act.findViewById(R.id.otherButton);
+		this.date = (Button) act.findViewById(R.id.dateButton);
 
 		this.save.setOnClickListener(this.saveListener);
 		this.clear.setOnClickListener(this.clearListener);
-		this.other.setOnClickListener(this.otherListener);	
+		this.date.setOnClickListener(this.dateListener);	
 	}
 
 	private OnClickListener saveListener = new OnClickListener() {
@@ -46,6 +49,11 @@ public class BottomBarButtonManager {
 			float q = Float.parseFloat(quantity.getText().toString());
 			//Expense / Income
 			ToggleButton tb = (ToggleButton) activity.findViewById(R.id.income_expense_button);
+			//Date
+			Calendar c = Calendar.getInstance();
+	        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+	        String formattedDate = df.format(c.getTime());
+			
 			
 			if(tb.isChecked()) {
 				ElementManager.getElementManager().addElement(
@@ -77,10 +85,11 @@ public class BottomBarButtonManager {
 		}
 	};
 
-	private OnClickListener otherListener = new OnClickListener() {
+	private OnClickListener dateListener = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			activity.finish();
+			Intent i = new Intent(activity, DatePickerActivity.class);
+			activity.startActivity(i);
 		}
 	};
 	
