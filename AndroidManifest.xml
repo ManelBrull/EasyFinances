@@ -26,6 +26,7 @@
             android:name="manire.janel.easyfinances.DatePickerActivity"
             android:label="@string/title_activity_date_picker" >
         </activity>
+          <activity android:name=".FragmentDialogDemo"></activity>
     </application>
 
 </manifest>

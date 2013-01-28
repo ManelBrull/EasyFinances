@@ -6,7 +6,13 @@ import java.util.Calendar;
 import manire.janel.easyfinances.elements.ElementManager;
 import manire.janel.easyfinances.elements.Expense;
 import manire.janel.easyfinances.elements.Income;
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -18,12 +24,27 @@ import android.widget.ToggleButton;
 import com.actionbarsherlock.app.SherlockActivity;
 
 public class BottomBarButtonManager {
-	SherlockActivity activity;
+	FragmentActivity activity; //activity in which is shown the bottom button bar
+	
 	Button save;
 	Button clear;
 	Button date;
+	
+	static final int DATE_DIALOG_ID = 2608; // Needed for dialog id
 
-	public BottomBarButtonManager(SherlockActivity act){
+//	public BottomBarButtonManager(SherlockActivity act){
+//		this.activity = act;
+//
+//		this.save = (Button) act.findViewById(R.id.saveButton);
+//		this.clear = (Button) act.findViewById(R.id.clearButton);
+//		this.date = (Button) act.findViewById(R.id.dateButton);
+//
+//		this.save.setOnClickListener(this.saveListener);
+//		this.clear.setOnClickListener(this.clearListener);
+//		this.date.setOnClickListener(this.dateListener);	
+//	}
+
+	public BottomBarButtonManager(FragmentActivity act){
 		this.activity = act;
 
 		this.save = (Button) act.findViewById(R.id.saveButton);
@@ -35,6 +56,7 @@ public class BottomBarButtonManager {
 		this.date.setOnClickListener(this.dateListener);	
 	}
 
+	
 	private OnClickListener saveListener = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
@@ -86,13 +108,16 @@ public class BottomBarButtonManager {
 	};
 
 	private OnClickListener dateListener = new OnClickListener() {
+
 		@Override
 		public void onClick(View v) {
-			Intent i = new Intent(activity, DatePickerActivity.class);
-			activity.startActivity(i);
+			// TODO Auto-generated method stub
+			 FragmentManager fm = activity.getSupportFragmentManager();
+		     MyDatePickerDialog myDatePickerDialog = new MyDatePickerDialog();
+		     myDatePickerDialog.show(fm, "DatePickerDialog");		
 		}
+		
 	};
-	
 }
 
 
