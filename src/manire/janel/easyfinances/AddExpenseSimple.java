@@ -5,16 +5,17 @@ package manire.janel.easyfinances;
 
 import manire.janel.easyfinances.category.CategoriesSpinnerAdapter;
 import manire.janel.easyfinances.utils.Utils;
+import android.app.DatePickerDialog.OnDateSetListener;
 import android.os.Bundle;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
-public class AddExpenseSimple extends SherlockFragmentActivity {
+public class AddExpenseSimple extends SherlockFragmentActivity implements OnDateSetListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,4 +53,14 @@ public class AddExpenseSimple extends SherlockFragmentActivity {
                 return true;
         }
     }
+
+	/**
+	 * This function is used when the user decide to change the date using the bottom bar
+	 * button "Date"
+	 */
+	@Override
+	public void onDateSet(DatePicker view, int year, int monthOfYear,
+			int dayOfMonth) {
+//    We do our staff with the date here
+	}
 }

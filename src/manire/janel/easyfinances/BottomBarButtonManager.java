@@ -8,6 +8,7 @@ import manire.janel.easyfinances.elements.Expense;
 import manire.janel.easyfinances.elements.Income;
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
@@ -16,15 +17,18 @@ import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.app.SherlockFragment;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 public class BottomBarButtonManager {
-	FragmentActivity activity; //activity in which is shown the bottom button bar
+	SherlockFragmentActivity activity; //activity in which is shown the bottom button bar
 	
 	Button save;
 	Button clear;
@@ -32,19 +36,7 @@ public class BottomBarButtonManager {
 	
 	static final int DATE_DIALOG_ID = 2608; // Needed for dialog id
 
-//	public BottomBarButtonManager(SherlockActivity act){
-//		this.activity = act;
-//
-//		this.save = (Button) act.findViewById(R.id.saveButton);
-//		this.clear = (Button) act.findViewById(R.id.clearButton);
-//		this.date = (Button) act.findViewById(R.id.dateButton);
-//
-//		this.save.setOnClickListener(this.saveListener);
-//		this.clear.setOnClickListener(this.clearListener);
-//		this.date.setOnClickListener(this.dateListener);	
-//	}
-
-	public BottomBarButtonManager(FragmentActivity act){
+	public BottomBarButtonManager(SherlockFragmentActivity act){
 		this.activity = act;
 
 		this.save = (Button) act.findViewById(R.id.saveButton);
@@ -71,11 +63,10 @@ public class BottomBarButtonManager {
 			float q = Float.parseFloat(quantity.getText().toString());
 			//Expense / Income
 			ToggleButton tb = (ToggleButton) activity.findViewById(R.id.income_expense_button);
-			//Date
+			//Date NOT REALLY IMPLEMENTED RIGHT NOW
 			Calendar c = Calendar.getInstance();
 	        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 	        String formattedDate = df.format(c.getTime());
-			
 			
 			if(tb.isChecked()) {
 				ElementManager.getElementManager().addElement(
@@ -106,17 +97,19 @@ public class BottomBarButtonManager {
 			tb.setChecked(false);
 		}
 	};
-
+	
+	/**
+	 * The input from the user is received in AddExpenseSimple class
+	 */
 	private OnClickListener dateListener = new OnClickListener() {
 
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			 FragmentManager fm = activity.getSupportFragmentManager();
-		     MyDatePickerDialog myDatePickerDialog = new MyDatePickerDialog();
-		     myDatePickerDialog.show(fm, "DatePickerDialog");		
+		     MyDatePickerDialog myDatePickerDialog = new MyDatePickerDialog(activity);
+		     myDatePickerDialog.show(fm, "DatePickerDialog");
 		}
-		
 	};
 }
 
