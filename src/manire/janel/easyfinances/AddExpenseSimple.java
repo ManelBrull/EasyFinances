@@ -61,6 +61,6 @@ public class AddExpenseSimple extends SherlockFragmentActivity implements OnDate
 	@Override
 	public void onDateSet(DatePicker view, int year, int monthOfYear,
 			int dayOfMonth) {
-//    We do our staff with the date here
+//    We do our staff with the date here (Actually we do nothing
 	}
 }

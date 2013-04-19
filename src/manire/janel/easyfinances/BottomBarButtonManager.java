@@ -60,23 +60,29 @@ public class BottomBarButtonManager {
 			int cat = catSelector.getSelectedItemPosition();			
 			//Quantity
 			EditText quantity = (EditText) activity.findViewById(R.id.quantityinputfield);
-			float q = Float.parseFloat(quantity.getText().toString());
-			//Expense / Income
-			ToggleButton tb = (ToggleButton) activity.findViewById(R.id.income_expense_button);
-			//Date NOT REALLY IMPLEMENTED RIGHT NOW
-			Calendar c = Calendar.getInstance();
-	        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-	        String formattedDate = df.format(c.getTime());
-			
-			if(tb.isChecked()) {
-				ElementManager.getElementManager().addElement(
-						new Income(ocrS, cat, q));
-			} else {
-				ElementManager.getElementManager().addElement(
-						new Expense(ocrS, cat, q));
+			if (quantity.getText().length() == 0) {
+				Toast.makeText(activity.getApplicationContext(), "Empty quantity", Toast.LENGTH_SHORT).show();
 			}
-			
-			Toast.makeText(activity.getApplicationContext(), "Saved", Toast.LENGTH_SHORT).show();
+			else {
+				float q = Float.parseFloat(quantity.getText().toString());
+				//Expense / Income
+				ToggleButton tb = (ToggleButton) activity.findViewById(R.id.income_expense_button);
+				//Date NOT REALLY IMPLEMENTED RIGHT NOW
+				Calendar c = Calendar.getInstance();
+		        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		        String formattedDate = df.format(c.getTime());
+				
+				if(tb.isChecked()) {
+					ElementManager.getElementManager().addElement(
+							new Income(ocrS, cat, q));
+				} else {
+					ElementManager.getElementManager().addElement(
+							new Expense(ocrS, cat, q));
+				}
+				
+				Toast.makeText(activity.getApplicationContext(), "Saved", Toast.LENGTH_SHORT).show();
+				activity.finish();
+			}
 		}
 	};
 
@@ -86,10 +92,10 @@ public class BottomBarButtonManager {
 			
 			EditText ocr = (EditText) activity.findViewById(R.id.ocrinputfield);
 			ocr.setText(null);
-			
+			/* I don´t think we want to clear this
 			Spinner catSelector = (Spinner) activity.findViewById(R.id.spinnercatselect);
 			catSelector.setSelection(0);
-			
+			*/
 			EditText quantity = (EditText) activity.findViewById(R.id.quantityinputfield);
 			quantity.setText(null);
 			

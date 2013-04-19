@@ -24,11 +24,11 @@ public class CategoriesManager {
 
 		//if(this.categoriesManager == null) {
 			this.setCategoryList(new ArrayList<Category>());
-			this.addCategory(new Category(1, "Uncategorized"));
-			this.addCategory(new Category(2, "Supermarket"));
-			this.addCategory(new Category(3, "Fast-Food Meal"));
-			this.addCategory(new Category(4, "House"));
-			this.addCategory(new Category(5, "Car"));
+			this.addCategory(new Category(1, "Grorcery", R.drawable.trolley));
+			this.addCategory(new Category(2, "Party", R.drawable.party_icon));
+			this.addCategory(new Category(3, "Eating outside", R.drawable.icon_eating));
+			this.addCategory(new Category(4, "House", R.drawable.icon_home));
+			this.addCategory(new Category(5, "Transport", R.drawable.car_icon));
 			this.addCategory(new Category(6, "Gifts", R.drawable.hardware_computer));
 		}
 	//}
