@@ -801,6 +801,14 @@ containing a value of this type.
         /**  Minimum width of the search view text entry area. 
          */
         public static final int abs__search_view_text_min_width=0x7f07000b;
+        /**  Default screen margins, per the Android Design guidelines. 
+
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    
+         */
+        public static final int activity_horizontal_margin=0x7f07000f;
+        public static final int activity_vertical_margin=0x7f070010;
     }
     public static final class drawable {
         public static final int abs__ab_bottom_solid_dark_holo=0x7f020000;
@@ -978,6 +986,7 @@ containing a value of this type.
         public static final int abs__textButton=0x7f040013;
         public static final int abs__title=0x7f04001b;
         public static final int abs__up=0x7f04000b;
+        public static final int action_settings=0x7f04003d;
         public static final int catSpinnerImg=0x7f04003a;
         public static final int catSpinnerText=0x7f04003b;
         public static final int clearButton=0x7f040038;
@@ -1028,12 +1037,14 @@ containing a value of this type.
         public static final int abs__simple_dropdown_hint=0x7f030015;
         public static final int add_expense_simple=0x7f030016;
         public static final int add_expense_simple_buttons_bar=0x7f030017;
-        public static final int sherlock_spinner_dropdown_item=0x7f030018;
-        public static final int sherlock_spinner_item=0x7f030019;
-        public static final int spinner_categories=0x7f03001a;
+        public static final int control_panel_layout=0x7f030018;
+        public static final int sherlock_spinner_dropdown_item=0x7f030019;
+        public static final int sherlock_spinner_item=0x7f03001a;
+        public static final int spinner_categories=0x7f03001b;
     }
     public static final class menu {
         public static final int add_expense_simple=0x7f0b0000;
+        public static final int control_panel=0x7f0b0001;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1075,6 +1086,7 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090007;
+        public static final int action_settings=0x7f090018;
         public static final int app_name=0x7f09000d;
         public static final int category=0x7f09000f;
         public static final int hello_world=0x7f090011;
@@ -1084,6 +1096,7 @@ containing a value of this type.
         public static final int ocr=0x7f09000e;
         public static final int quantity=0x7f090010;
         public static final int title_activity_add_expense_simple=0x7f090013;
+        public static final int title_activity_control_panel=0x7f090017;
         public static final int title_activity_date_picker=0x7f090016;
     }
     public static final class style {

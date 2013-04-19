@@ -138,6 +138,8 @@ int dimen abs__dropdownitem_text_padding_left 0x7f070008
 int dimen abs__dropdownitem_text_padding_right 0x7f070009
 int dimen abs__search_view_preferred_width 0x7f07000c
 int dimen abs__search_view_text_min_width 0x7f07000b
+int dimen activity_horizontal_margin 0x7f07000f
+int dimen activity_vertical_margin 0x7f070010
 int drawable abs__ab_bottom_solid_dark_holo 0x7f020000
 int drawable abs__ab_bottom_solid_inverse_holo 0x7f020001
 int drawable abs__ab_bottom_solid_light_holo 0x7f020002
@@ -311,6 +313,7 @@ int id abs__submit_area 0x7f04002f
 int id abs__textButton 0x7f040013
 int id abs__title 0x7f04001b
 int id abs__up 0x7f04000b
+int id action_settings 0x7f04003d
 int id catSpinnerImg 0x7f04003a
 int id catSpinnerText 0x7f04003b
 int id clearButton 0x7f040038
@@ -357,10 +360,12 @@ int layout abs__search_view 0x7f030014
 int layout abs__simple_dropdown_hint 0x7f030015
 int layout add_expense_simple 0x7f030016
 int layout add_expense_simple_buttons_bar 0x7f030017
-int layout sherlock_spinner_dropdown_item 0x7f030018
-int layout sherlock_spinner_item 0x7f030019
-int layout spinner_categories 0x7f03001a
+int layout control_panel_layout 0x7f030018
+int layout sherlock_spinner_dropdown_item 0x7f030019
+int layout sherlock_spinner_item 0x7f03001a
+int layout spinner_categories 0x7f03001b
 int menu add_expense_simple 0x7f0b0000
+int menu control_panel 0x7f0b0001
 int string abs__action_bar_home_description 0x7f090000
 int string abs__action_bar_up_description 0x7f090001
 int string abs__action_menu_overflow_description 0x7f090002
@@ -374,6 +379,7 @@ int string abs__searchview_description_submit 0x7f09000b
 int string abs__searchview_description_voice 0x7f09000c
 int string abs__shareactionprovider_share_with 0x7f090006
 int string abs__shareactionprovider_share_with_application 0x7f090007
+int string action_settings 0x7f090018
 int string app_name 0x7f09000d
 int string category 0x7f09000f
 int string hello_world 0x7f090011
@@ -383,6 +389,7 @@ int string menu_settings 0x7f090012
 int string ocr 0x7f09000e
 int string quantity 0x7f090010
 int string title_activity_add_expense_simple 0x7f090013
+int string title_activity_control_panel 0x7f090017
 int string title_activity_date_picker 0x7f090016
 int style AppBaseTheme 0x7f0a0059
 int style AppTheme 0x7f0a005a

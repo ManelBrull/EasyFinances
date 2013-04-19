@@ -26,7 +26,12 @@
             android:name="manire.janel.easyfinances.DatePickerActivity"
             android:label="@string/title_activity_date_picker" >
         </activity>
-          <activity android:name=".FragmentDialogDemo"></activity>
+        <activity android:name="manire.janel.easyfinances.FragmentDialogDemo" >
+        </activity>
+        <activity
+            android:name="manire.janel.easyfinances.controlpanel.ControlPanelActivity"
+            android:label="@string/title_activity_control_panel" >
+        </activity>
     </application>
 
 </manifest>

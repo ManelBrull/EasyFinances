@@ -4,8 +4,10 @@ package manire.janel.easyfinances;
 
 
 import manire.janel.easyfinances.category.CategoriesSpinnerAdapter;
+import manire.janel.easyfinances.controlpanel.ControlPanelActivity;
 import manire.janel.easyfinances.utils.Utils;
 import android.app.DatePickerDialog.OnDateSetListener;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -46,8 +48,8 @@ public class AddExpenseSimple extends SherlockFragmentActivity implements OnDate
 	public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.Menu_settings:
-            	//Intent i = new Intent(this, TabsActivity.class);
-				//startActivity(i);
+            	Intent i = new Intent(this, ControlPanelActivity.class);
+				startActivity(i);
                 return true; 
             default:
                 return true;
