@@ -25,7 +25,7 @@ public class ControlPanelItemsManager {
 				this.setControlPanelItemListFields(new ArrayList<ControlPanelItemFields>());
 				this.addControlPanelItemFields(new ControlPanelItemFields("Last Movements"));
 				this.addControlPanelItemFields(new ControlPanelItemFields("Total Expenses"));
-				this.addControlPanelItemFields(new ControlPanelItemFields("Grpahs"));
+				this.addControlPanelItemFields(new ControlPanelItemFields("Graphs"));
 				this.addControlPanelItemFields(new ControlPanelItemFields("Customize"));
 				this.addControlPanelItemFields(new ControlPanelItemFields("Settings"));
 			}
@@ -36,7 +36,7 @@ public class ControlPanelItemsManager {
 		private ArrayList <ControlPanelItemFields> controlPanelItemListFields;
 		
 		
-		public ControlPanelItemFields getControlPanelItem(int position){
+		public ControlPanelItemFields getControlPanelItemFields(int position){
 			return this.controlPanelItemListFields.get(position);
 		}
 		

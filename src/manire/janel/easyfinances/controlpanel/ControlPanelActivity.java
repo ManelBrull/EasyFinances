@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import manire.janel.easyfinances.R;
 import manire.janel.easyfinances.R.layout;
 import manire.janel.easyfinances.R.menu;
+import manire.janel.easyfinances.controlpanel.lastmovements.LastMovementsActivity;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -17,15 +19,8 @@ import android.widget.Toast;
 
 public class ControlPanelActivity extends Activity {
 
-	private ArrayList <String> ele; // Control panel list elements
 	private ControlPanelItemListAdapter adapter;
 	private ListView list;
-	
-	private String lastMovements = "Last movements";
-	private String totalExpenses = "Total expenses";
-	private String graphs = "Graphs";
-	private String customize = "Customize";
-	private String settings = "Settings";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +28,11 @@ public class ControlPanelActivity extends Activity {
 		setContentView(R.layout.control_panel_layout);
 		list = (ListView) findViewById(R.id.control_panel_list);
 		
-		ele = new ArrayList <String>();
-		ele.add(this.lastMovements);
-		ele.add(this.totalExpenses);
-		ele.add(this.graphs);
-		ele.add(this.customize);
-		ele.add(this.settings);
-		
-		adapter = new ControlPanelItemListAdapter(this, ele);
+		adapter = new ControlPanelItemListAdapter(this);
 		list.setAdapter(adapter);
 		adapter.notifyDataSetChanged();
-		
 	}
+	
 	/**
 	 * Handler for each button of the control panel
 	 * @param v View
@@ -58,11 +46,12 @@ public class ControlPanelActivity extends Activity {
 	    
 	    String show = "0";
 	    
-	    if(buttonClicked == this.lastMovements){
+	    if(buttonClicked == "Last Movements"){
 	    	// do stuff
-	    	show = "1";
+	    	Intent i = new Intent(this, LastMovementsActivity.class);
+	    	startActivity(i);
 	    }
-	    if(buttonClicked == this.totalExpenses){
+	  /*  if(buttonClicked == this.totalExpenses){
 	    	// do stuff
 	    	show = "2";
 	    }
@@ -78,7 +67,7 @@ public class ControlPanelActivity extends Activity {
 	    	// do stuff
 	    	show = "5";
 	    }
-	    
+	    */
 	    Toast.makeText(getApplicationContext(), show, Toast.LENGTH_LONG).show();
 		vwParentRow.refreshDrawableState();
 	    

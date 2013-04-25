@@ -1041,13 +1041,15 @@ containing a value of this type.
         public static final int add_expense_simple_buttons_bar=0x7f030017;
         public static final int control_panel_item=0x7f030018;
         public static final int control_panel_layout=0x7f030019;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001a;
-        public static final int sherlock_spinner_item=0x7f03001b;
-        public static final int spinner_categories=0x7f03001c;
+        public static final int last_movements_activity=0x7f03001a;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001b;
+        public static final int sherlock_spinner_item=0x7f03001c;
+        public static final int spinner_categories=0x7f03001d;
     }
     public static final class menu {
         public static final int add_expense_simple=0x7f0b0000;
         public static final int control_panel=0x7f0b0001;
+        public static final int last_movements=0x7f0b0002;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1101,6 +1103,7 @@ containing a value of this type.
         public static final int title_activity_add_expense_simple=0x7f090013;
         public static final int title_activity_control_panel=0x7f090017;
         public static final int title_activity_date_picker=0x7f090016;
+        public static final int title_activity_last_movements=0x7f090019;
     }
     public static final class style {
         /** 

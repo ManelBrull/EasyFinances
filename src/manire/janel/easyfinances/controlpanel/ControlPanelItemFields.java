@@ -9,16 +9,16 @@ public class ControlPanelItemFields {
 	private int drawable;
 	
 	public ControlPanelItemFields(){
-		setText("");
-		setDrawable(-1);
+		this.setText("");
+		this.setDrawable(-1);
 	}
 	/**
 	 * Constructor only with the text parameter
 	 * @param txt String with the text is going to be shown
 	 */
 	public ControlPanelItemFields(String txt) {
-		setText(txt);
-		setDrawable(-1);
+		this.setText(txt);
+		this.setDrawable(-1);
 	}
 	
 	/**
@@ -27,20 +27,23 @@ public class ControlPanelItemFields {
 	 * @param drw Resource to be drawn
 	 */
 	public ControlPanelItemFields(String txt, int drw) {
-		setText(txt);
-		setDrawable(drw);
+		this.setText(txt);
+		this.setDrawable(drw);
 	}
 	
 	
 	public String getText() {
 		return text;
 	}
+	
 	public void setText(String text) {
 		this.text = text;
 	}
+	
 	public int getDrawable() {
 		return drawable;
 	}
+	
 	public void setDrawable(int drawable) {
 		this.drawable = drawable;
 	}

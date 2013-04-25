@@ -10,23 +10,24 @@ import android.widget.BaseAdapter;
 public class ControlPanelItemListAdapter extends BaseAdapter {
 
 	private Activity activity;
-	private ArrayList <String> controlPanelItems;
-	
-	public ControlPanelItemListAdapter(Activity act, ArrayList <String> ControlPanelItems){
+	/**
+	 * Uses ControlPanelItemsManager to load the otions
+	 * @param act
+	 */
+	public ControlPanelItemListAdapter(Activity act){
 		this.activity = act;
-		this.controlPanelItems = new ArrayList <String>(ControlPanelItems);
 	}
 	
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return controlPanelItems.size();
+		return ControlPanelItemsManager.getControlPanelItemsManager().getControlPanelItemListFields().size();
 	}
 
 	@Override
 	public Object getItem(int arg0) {
 		// TODO Auto-generated method stub
-		return this.controlPanelItems.get(arg0);
+		return ControlPanelItemsManager.getControlPanelItemsManager().getControlPanelItemFields(arg0);
 	}
 
 	@Override
@@ -39,7 +40,7 @@ public class ControlPanelItemListAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		ControlPanelItem cpil = new ControlPanelItem(this.activity,
-							this.controlPanelItems.get(position));
+				ControlPanelItemsManager.getControlPanelItemsManager().getControlPanelItemFields(position));
 		return cpil;
 	}
 

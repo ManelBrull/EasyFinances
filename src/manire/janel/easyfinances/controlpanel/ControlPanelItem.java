@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 public class ControlPanelItem extends LinearLayout {
 	
 	private Button controlPanelItemButton;
-	private ControlPanelItemFields fields = new ControlPanelItemFields();
+	private ControlPanelItemFields fields;
 	
 	/**
 	 * Constructor with context and text to display
@@ -23,7 +23,7 @@ public class ControlPanelItem extends LinearLayout {
 	 */
 	public ControlPanelItem(Context context, String str) {
 		super(context);
-		this.getFields().setText(str);
+		this.fields = new ControlPanelItemFields(str);
 		inicializar();
 	}
 	/**
@@ -34,10 +34,21 @@ public class ControlPanelItem extends LinearLayout {
 	 */
 	public ControlPanelItem(Context context, String str, int drw) {
 		super(context);
-		this.getFields().setText(str);
-		this.getFields().setDrawable(drw);
+		this.fields = new ControlPanelItemFields(str, drw);
 		inicializar();
 	}
+	
+	/**
+	 * Constructor with the context and controlPanelItemFields
+	 * @param context
+	 * @param ele
+	 */
+	public ControlPanelItem(Context context, ControlPanelItemFields ele){
+		super(context);
+		this.fields = new ControlPanelItemFields(ele.getText(), ele.getDrawable());
+		inicializar();
+	}
+	
 	
 	private void inicializar(){
 		String infService = Context.LAYOUT_INFLATER_SERVICE;

@@ -364,11 +364,13 @@ int layout add_expense_simple 0x7f030016
 int layout add_expense_simple_buttons_bar 0x7f030017
 int layout control_panel_item 0x7f030018
 int layout control_panel_layout 0x7f030019
-int layout sherlock_spinner_dropdown_item 0x7f03001a
-int layout sherlock_spinner_item 0x7f03001b
-int layout spinner_categories 0x7f03001c
+int layout last_movements_activity 0x7f03001a
+int layout sherlock_spinner_dropdown_item 0x7f03001b
+int layout sherlock_spinner_item 0x7f03001c
+int layout spinner_categories 0x7f03001d
 int menu add_expense_simple 0x7f0b0000
 int menu control_panel 0x7f0b0001
+int menu last_movements 0x7f0b0002
 int string abs__action_bar_home_description 0x7f090000
 int string abs__action_bar_up_description 0x7f090001
 int string abs__action_menu_overflow_description 0x7f090002
@@ -394,6 +396,7 @@ int string quantity 0x7f090010
 int string title_activity_add_expense_simple 0x7f090013
 int string title_activity_control_panel 0x7f090017
 int string title_activity_date_picker 0x7f090016
+int string title_activity_last_movements 0x7f090019
 int style AppBaseTheme 0x7f0a0059
 int style AppTheme 0x7f0a005a
 int style EasyFinances_ControlPanel_Item_Button 0x7f0a005e
