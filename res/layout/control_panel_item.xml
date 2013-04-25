@@ -6,9 +6,7 @@
 
     <Button
         android:id="@+id/control_panel_list_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:text="button1" />
+        style="@style/EasyFinances.ControlPanel.Item.Button"
+        />
 
 </LinearLayout>

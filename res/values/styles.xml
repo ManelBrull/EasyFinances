@@ -17,6 +17,7 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <!--  THEMES FOR ADD EXPENSE -->
     <!--  Theme for add_expenses_simple bottom button bar -->
     <style name="EasyFinances.bottom_bar.button" parent="@style/Theme.Sherlock.NoActionBar">
         <item name="android:background">@drawable/bottom_bar_button_selector</item>
@@ -42,8 +43,20 @@
         <item name="android:windowIsTranslucent">true</item>
     </style>    
     
+    <!-- THEMES FOR CONTROL PANEL -->
+    <!-- Theme for each button of the control panel -->
+     <style name="EasyFinances.ControlPanel.Item.Button" parent="@style/Theme.Sherlock.NoActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/background_dark</item>
+        <item name="android:minHeight">60dp</item>
+        <item name="android:textColor">@android:color/background_light</item>
+        <item name="android:focusable">false</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:onClick">controlPanelButtonHandler</item>
+    </style>
     
-    <!--  Colors -->
+    <!--  COLORS -->
     <color name="red">#00FF00</color>
     <color name="dark_green">#669900</color>
     <color name="dark_red">#CC0000</color>
