@@ -6,13 +6,23 @@ import manire.janel.easyfinances.R.menu;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.ListView;
 
 public class LastMovementsActivity extends Activity {
 
+	private ListView list;
+	private LastMovementItemListAdapter adapter;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.last_movements_activity);
+		list = (ListView) findViewById(R.id.lastMovementsActivityList);
+		
+		adapter = new LastMovementItemListAdapter(this);
+		list.setAdapter(adapter);
+		
+		
 	}
 
 	@Override

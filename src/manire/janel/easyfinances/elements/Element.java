@@ -4,6 +4,8 @@
 package manire.janel.easyfinances.elements;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import manire.janel.easyfinances.category.CategoriesManager;
 
@@ -19,11 +21,14 @@ public class Element implements Serializable {
 	private String ocr;
 	private int category; // position number in CategoriesManager
 	private float quantity;
+	private String date;
 	
-	public Element(String o, int cat, float q) {
+	
+	public Element(String o, int cat, float q, String date) {
 		this.setOcr(o);
 		this.setCategory(cat);
 		this.setQuantity(q); 
+		this.setDate(date);
 	}
 	
 	public String toString() {
@@ -52,14 +57,20 @@ public class Element implements Serializable {
 		this.category = category;
 	}
 
-	private float getQuantity() {
+	public float getQuantity() {
 		return quantity;
 	}
 
 	private void setQuantity(float quantity) {
 		this.quantity = quantity;
 	}
-	
-	
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
 	
 }

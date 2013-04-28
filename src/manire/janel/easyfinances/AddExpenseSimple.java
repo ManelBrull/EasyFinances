@@ -1,8 +1,5 @@
 package manire.janel.easyfinances;
 
-
-
-
 import manire.janel.easyfinances.category.CategoriesSpinnerAdapter;
 import manire.janel.easyfinances.controlpanel.ControlPanelActivity;
 import manire.janel.easyfinances.utils.Utils;
@@ -17,8 +14,10 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 
-public class AddExpenseSimple extends SherlockFragmentActivity implements OnDateSetListener {
+public class AddExpenseSimple extends SherlockFragmentActivity implements OnDateSetListener  {
 
+	BottomBarButtonManager bottomBarButtonManager;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		setTheme(R.style.Theme_Sherlock);
@@ -35,7 +34,7 @@ public class AddExpenseSimple extends SherlockFragmentActivity implements OnDate
  		Spinner catSelector = (Spinner) findViewById(R.id.spinnercatselect);
 		catSelector.setAdapter(new CategoriesSpinnerAdapter(this.getApplicationContext(), this));
 
-		new BottomBarButtonManager(this);		
+		this.bottomBarButtonManager = new BottomBarButtonManager(this);		
 	}
 
 	@Override
@@ -56,13 +55,12 @@ public class AddExpenseSimple extends SherlockFragmentActivity implements OnDate
         }
     }
 
-	/**
-	 * This function is used when the user decide to change the date using the bottom bar
-	 * button "Date"
-	 */
 	@Override
 	public void onDateSet(DatePicker view, int year, int monthOfYear,
 			int dayOfMonth) {
-//    We do our staff with the date here (Actually we do nothing)
+		// TODO Auto-generated method stub
+		this.bottomBarButtonManager.setDay(dayOfMonth);
+		this.bottomBarButtonManager.setMonth(monthOfYear+1);
+		this.bottomBarButtonManager.setYear(year);
 	}
 }

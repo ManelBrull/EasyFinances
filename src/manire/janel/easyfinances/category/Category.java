@@ -13,6 +13,11 @@ import android.widget.TextView;
 
 public class Category implements Serializable {
 	
+	/**
+	 * Default serial version
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private int id;
 	private String nombre;
 	private int img;

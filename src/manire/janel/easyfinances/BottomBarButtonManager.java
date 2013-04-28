@@ -2,17 +2,13 @@ package manire.janel.easyfinances;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import manire.janel.easyfinances.elements.ElementManager;
 import manire.janel.easyfinances.elements.Expense;
 import manire.janel.easyfinances.elements.Income;
-import android.app.Activity;
-import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
-import android.app.Dialog;
-import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,16 +19,14 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
-public class BottomBarButtonManager {
+public class BottomBarButtonManager  {
 	SherlockFragmentActivity activity; //activity in which is shown the bottom button bar
 	
-	Button save;
-	Button clear;
-	Button date;
+	private Button save, clear, date;
+	private int year, month, day = -1;
+	
 	
 	static final int DATE_DIALOG_ID = 2608; // Needed for dialog id
 
@@ -67,17 +61,31 @@ public class BottomBarButtonManager {
 				float q = Float.parseFloat(quantity.getText().toString());
 				//Expense / Income
 				ToggleButton tb = (ToggleButton) activity.findViewById(R.id.income_expense_button);
-				//Date NOT REALLY IMPLEMENTED RIGHT NOW
-				Calendar c = Calendar.getInstance();
-		        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-		        String formattedDate = df.format(c.getTime());
 				
+				String savedDate;
+				if( year == month && month == day && day == -1){
+					Calendar c = Calendar.getInstance();
+					SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+					savedDate = dt.format(c.getTime());
+				}
+				else {
+					String sYear = String.valueOf(year);
+					String sMonth = String.valueOf(month);
+					String sDay = String.valueOf(day);
+					if(month > 0 && month < 10) {
+						sMonth = "0" + String.valueOf(month);
+					}
+					if(day > 0 && day < 10){
+						sDay = "0" + String.valueOf(day);
+					}
+					savedDate = sYear + "-" + sMonth + "-" + sDay;
+				}
 				if(tb.isChecked()) {
 					ElementManager.getElementManager().addElement(
-							new Income(ocrS, cat, q));
+							new Income(ocrS, cat, q, savedDate));
 				} else {
 					ElementManager.getElementManager().addElement(
-							new Expense(ocrS, cat, q));
+							new Expense(ocrS, cat, q, savedDate));
 				}
 				
 				Toast.makeText(activity.getApplicationContext(), "Saved", Toast.LENGTH_SHORT).show();
@@ -107,7 +115,7 @@ public class BottomBarButtonManager {
 	/**
 	 * The input from the user is received in AddExpenseSimple class
 	 */
-	private OnClickListener dateListener = new OnClickListener() {
+	private OnClickListener dateListener  = new OnClickListener() {
 
 		@Override
 		public void onClick(View v) {
@@ -115,8 +123,19 @@ public class BottomBarButtonManager {
 			 FragmentManager fm = activity.getSupportFragmentManager();
 		     MyDatePickerDialog myDatePickerDialog = new MyDatePickerDialog(activity);
 		     myDatePickerDialog.show(fm, "DatePickerDialog");
+		     
 		}
+		
 	};
+	public void setYear(int y){
+		this.year = y;
+	}
+	public void setMonth(int m){
+		this.month = m;
+	}
+	public void setDay(int d){
+		this.day = d;
+	}
 }
 
 

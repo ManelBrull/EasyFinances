@@ -946,7 +946,8 @@ containing a value of this type.
         public static final int trolley=0x7f020084;
     }
     public static final class id {
-        public static final int Menu_settings=0x7f04003e;
+        public static final int LastMovementItemDate=0x7f04003c;
+        public static final int Menu_settings=0x7f040040;
         public static final int abs__action_bar=0x7f040020;
         public static final int abs__action_bar_container=0x7f04001f;
         public static final int abs__action_bar_subtitle=0x7f040011;
@@ -986,9 +987,9 @@ containing a value of this type.
         public static final int abs__textButton=0x7f040013;
         public static final int abs__title=0x7f04001b;
         public static final int abs__up=0x7f04000b;
-        public static final int action_settings=0x7f04003f;
-        public static final int catSpinnerImg=0x7f04003c;
-        public static final int catSpinnerText=0x7f04003d;
+        public static final int action_settings=0x7f040041;
+        public static final int catSpinnerImg=0x7f04003e;
+        public static final int catSpinnerText=0x7f04003f;
         public static final int clearButton=0x7f040038;
         public static final int control_panel_list=0x7f04003b;
         public static final int control_panel_list_button=0x7f04003a;
@@ -997,6 +998,7 @@ containing a value of this type.
         public static final int edit_query=0x7f040026;
         public static final int homeAsUp=0x7f040006;
         public static final int income_expense_button=0x7f040035;
+        public static final int lastMovementsActivityList=0x7f04003d;
         public static final int listMode=0x7f040002;
         public static final int message_buttons=0x7f040036;
         public static final int normal=0x7f040001;
@@ -1041,10 +1043,11 @@ containing a value of this type.
         public static final int add_expense_simple_buttons_bar=0x7f030017;
         public static final int control_panel_item=0x7f030018;
         public static final int control_panel_layout=0x7f030019;
-        public static final int last_movements_activity=0x7f03001a;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001b;
-        public static final int sherlock_spinner_item=0x7f03001c;
-        public static final int spinner_categories=0x7f03001d;
+        public static final int last_movement_item=0x7f03001a;
+        public static final int last_movements_activity=0x7f03001b;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001c;
+        public static final int sherlock_spinner_item=0x7f03001d;
+        public static final int spinner_categories=0x7f03001e;
     }
     public static final class menu {
         public static final int add_expense_simple=0x7f0b0000;

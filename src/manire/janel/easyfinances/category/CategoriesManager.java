@@ -3,7 +3,6 @@ package manire.janel.easyfinances.category;
 import java.util.ArrayList;
 
 import manire.janel.easyfinances.R;
-import manire.janel.easyfinances.utils.Utils;
 
 public class CategoriesManager {
 
@@ -18,7 +17,6 @@ public class CategoriesManager {
 		return categoriesManager;
 	}
 	
-	@SuppressWarnings("unchecked")
 	private CategoriesManager() {
 		//this.setCategoryList((ArrayList<Categories>) Utils.getObjectFromSharedPreferences("categories"));
 

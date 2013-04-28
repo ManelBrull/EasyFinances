@@ -1,20 +1,16 @@
 package manire.janel.easyfinances.controlpanel;
 
-import java.util.ArrayList;
-
 import manire.janel.easyfinances.R;
-import manire.janel.easyfinances.R.layout;
-import manire.janel.easyfinances.R.menu;
 import manire.janel.easyfinances.controlpanel.lastmovements.LastMovementsActivity;
-import android.os.Bundle;
+import manire.janel.easyfinances.elements.ElementManager;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class ControlPanelActivity extends Activity {
@@ -44,12 +40,17 @@ public class ControlPanelActivity extends Activity {
 	    Button btnChild = (Button)vwParentRow.getChildAt(0);
 	    String buttonClicked = btnChild.getText().toString();
 	    
-	    String show = "0";
+	    //String show = "0";
 	    
 	    if(buttonClicked == "Last Movements"){
 	    	// do stuff
-	    	Intent i = new Intent(this, LastMovementsActivity.class);
-	    	startActivity(i);
+	    	if (ElementManager.getElementManager().getElementList().size() == 0){
+	    		Toast.makeText(getApplicationContext(), "No movements to show", Toast.LENGTH_SHORT).show();
+	    	}
+	    	else {
+	    		Intent i = new Intent(this, LastMovementsActivity.class);
+	    		startActivity(i);
+	    	}
 	    }
 	  /*  if(buttonClicked == this.totalExpenses){
 	    	// do stuff
@@ -68,7 +69,7 @@ public class ControlPanelActivity extends Activity {
 	    	show = "5";
 	    }
 	    */
-	    Toast.makeText(getApplicationContext(), show, Toast.LENGTH_LONG).show();
+	    //Toast.makeText(getApplicationContext(), show, Toast.LENGTH_LONG).show();
 		vwParentRow.refreshDrawableState();
 	    
 	}

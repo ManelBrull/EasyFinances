@@ -17,11 +17,22 @@ public class ElementManager {
 	@SuppressWarnings("unchecked")
 	private ElementManager() {
 		this.elementList = new ArrayList <Element>();
-		
-		addElement(new Expense("Mercadona", 1, 16.25f));
-		addElement(new Expense("Lidl", 1, 22.25f));
-		addElement(new Expense("Cacao-Sampaka", 3, 16.25f));
-		addElement(new Income("Padres", 4, 50.00f));
+		/*
+		Date dt = new Date(2013, 04, 28);
+		Date dt = new Date
+		SimpleDateFormat dts = new SimpleDateFormat("yyyy-MM-dd");
+		String savedDate = dts.format(dt);
+		addElement(new Expense("Mercadona", 1, 16.25f, savedDate));
+		dt = new Date(2013, 04, 27);
+		savedDate = dts.format(dt);
+		addElement(new Expense("Lidl", 1, 22.25f, savedDate));
+		dt = new Date(2013, 04, 26);
+		savedDate = dts.format(dt);
+		addElement(new Expense("Cacao-Sampaka", 3, 16.25f, savedDate));
+		dt = new Date(2013,04, 25);
+		savedDate = dts.format(dt);
+		addElement(new Income("Padres", 4, 50.00f, savedDate));
+		*/
 	}
 	
 	private ArrayList <Element> elementList;
