@@ -1,6 +1,8 @@
 package manire.janel.easyfinances.elements;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ElementManager {
 
@@ -17,9 +19,7 @@ public class ElementManager {
 	@SuppressWarnings("unchecked")
 	private ElementManager() {
 		this.elementList = new ArrayList <Element>();
-		/*
 		Date dt = new Date(2013, 04, 28);
-		Date dt = new Date
 		SimpleDateFormat dts = new SimpleDateFormat("yyyy-MM-dd");
 		String savedDate = dts.format(dt);
 		addElement(new Expense("Mercadona", 1, 16.25f, savedDate));
@@ -32,7 +32,6 @@ public class ElementManager {
 		dt = new Date(2013,04, 25);
 		savedDate = dts.format(dt);
 		addElement(new Income("Padres", 4, 50.00f, savedDate));
-		*/
 	}
 	
 	private ArrayList <Element> elementList;

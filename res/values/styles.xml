@@ -56,6 +56,14 @@
         <item name="android:onClick">controlPanelButtonHandler</item>
     </style>
     
+     <!-- THEMES FOR LAST MOVEMENTS -->
+     <style name="EasyFinances.ControlPanel.LastMovements.Divider" parent="@style/Theme.Sherlock.NoActionBar">
+         <item name="android:layout_width">3dp</item>
+         <item name="android:layout_height">fill_parent</item>
+         <item name="android:background">?attr/dividerVertical</item>
+     </style>
+     
+     
     <!--  COLORS -->
     <color name="red">#00FF00</color>
     <color name="dark_green">#669900</color>

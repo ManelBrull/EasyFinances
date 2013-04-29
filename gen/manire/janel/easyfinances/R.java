@@ -946,8 +946,9 @@ containing a value of this type.
         public static final int trolley=0x7f020084;
     }
     public static final class id {
-        public static final int LastMovementItemDate=0x7f04003c;
-        public static final int Menu_settings=0x7f040040;
+        public static final int LastMovementItemDate=0x7f04003d;
+        public static final int LastMovementItemImage=0x7f04003c;
+        public static final int Menu_settings=0x7f040042;
         public static final int abs__action_bar=0x7f040020;
         public static final int abs__action_bar_container=0x7f04001f;
         public static final int abs__action_bar_subtitle=0x7f040011;
@@ -987,9 +988,9 @@ containing a value of this type.
         public static final int abs__textButton=0x7f040013;
         public static final int abs__title=0x7f04001b;
         public static final int abs__up=0x7f04000b;
-        public static final int action_settings=0x7f040041;
-        public static final int catSpinnerImg=0x7f04003e;
-        public static final int catSpinnerText=0x7f04003f;
+        public static final int action_settings=0x7f040043;
+        public static final int catSpinnerImg=0x7f040040;
+        public static final int catSpinnerText=0x7f040041;
         public static final int clearButton=0x7f040038;
         public static final int control_panel_list=0x7f04003b;
         public static final int control_panel_list_button=0x7f04003a;
@@ -998,7 +999,8 @@ containing a value of this type.
         public static final int edit_query=0x7f040026;
         public static final int homeAsUp=0x7f040006;
         public static final int income_expense_button=0x7f040035;
-        public static final int lastMovementsActivityList=0x7f04003d;
+        public static final int lastMovementItemQuantity=0x7f04003e;
+        public static final int lastMovementsActivityList=0x7f04003f;
         public static final int listMode=0x7f040002;
         public static final int message_buttons=0x7f040036;
         public static final int normal=0x7f040001;
@@ -1139,6 +1141,9 @@ containing a value of this type.
  Theme for each button of the control panel 
          */
         public static final int EasyFinances_ControlPanel_Item_Button=0x7f0a005e;
+        /**  THEMES FOR LAST MOVEMENTS 
+         */
+        public static final int EasyFinances_ControlPanel_LastMovements_Divider=0x7f0a005f;
         /**   Theme for Date picker 
          */
         public static final int EasyFinances_DatePicker_WindowPadding=0x7f0a005d;

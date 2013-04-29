@@ -25,7 +25,7 @@ public class BottomBarButtonManager  {
 	SherlockFragmentActivity activity; //activity in which is shown the bottom button bar
 	
 	private Button save, clear, date;
-	private int year, month, day = -1;
+	private int year = -1, month = -1, day = -1;
 	
 	
 	static final int DATE_DIALOG_ID = 2608; // Needed for dialog id
@@ -62,8 +62,8 @@ public class BottomBarButtonManager  {
 				//Expense / Income
 				ToggleButton tb = (ToggleButton) activity.findViewById(R.id.income_expense_button);
 				
-				String savedDate;
-				if( year == month && month == day && day == -1){
+				String savedDate ="";
+				if( year < 0 || month < 0 || day < 0){
 					Calendar c = Calendar.getInstance();
 					SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
 					savedDate = dt.format(c.getTime());
