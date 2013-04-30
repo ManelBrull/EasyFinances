@@ -36,7 +36,7 @@ public class ControlPanelActivity extends Activity {
 	public void controlPanelButtonHandler(View v) {
 	    //get the row the clicked button is in
 		LinearLayout vwParentRow = (LinearLayout)v.getParent();
-	 		
+	 	
 	    Button btnChild = (Button)vwParentRow.getChildAt(0);
 	    String buttonClicked = btnChild.getText().toString();
 	    

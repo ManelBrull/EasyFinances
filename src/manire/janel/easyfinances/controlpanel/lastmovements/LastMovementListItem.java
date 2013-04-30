@@ -14,15 +14,26 @@ public class LastMovementListItem extends LinearLayout {
 	private TextView date;
 	private ImageView image;
 	private TextView quantity;
-	
-	public LastMovementListItem(Context cxt, int position){
+	/**
+	 * 
+	 * @param cxt
+	 * @param position
+	 * @param seeDate true -> Date, false -> OCR
+	 */
+	public LastMovementListItem(Context cxt, int position, Boolean seeDate){
 		super(cxt);
 		String infService = Context.LAYOUT_INFLATER_SERVICE;
 		LayoutInflater li = (LayoutInflater)getContext().getSystemService(infService);
 		li.inflate(R.layout.last_movement_item, this, true);
 		
 		this.date = (TextView) findViewById(R.id.LastMovementItemDate);
-		String dateText = ElementManager.getElementManager().getElement(position).getDate();
+		String dateText ="";
+		if(seeDate){
+			dateText = ElementManager.getElementManager().getElement(position).getDate();
+		}
+		else {
+			dateText = ElementManager.getElementManager().getElement(position).getOcr();
+		}
 		date.setText(dateText);
 		
 		this.image = (ImageView) findViewById(R.id.LastMovementItemImage);
