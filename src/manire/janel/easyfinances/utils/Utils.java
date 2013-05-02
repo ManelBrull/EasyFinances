@@ -18,7 +18,7 @@ public class Utils {
 
 	private static Context context = null;
 
-	private static final String prefFileName = "ZenInstantsDef";
+	private static final String prefFileName = "EasyFinancesDef";
 
 	/**
 	 * Help function to serialize an object into a string

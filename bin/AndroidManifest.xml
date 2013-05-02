@@ -36,6 +36,10 @@
             android:name="manire.janel.easyfinances.controlpanel.lastmovements.LastMovementsActivity"
             android:label="@string/title_activity_last_movements" >
         </activity>
+        <activity
+            android:name="manire.janel.easyfinances.controlpanel.totalexpenses.TotalExpensesActivity"
+            android:label="@string/title_activity_total_expenses" >
+        </activity>
     </application>
 
 </manifest>

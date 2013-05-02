@@ -22,16 +22,16 @@ public class ElementManager {
 		Date dt = new Date(2013, 04, 28);
 		SimpleDateFormat dts = new SimpleDateFormat("yyyy-MM-dd");
 		String savedDate = dts.format(dt);
-		addElement(new Expense("Mercadona", 1, 16.25f, savedDate));
+		addElement(new Expense("Mercadona", 0, 16.25f, savedDate));
 		dt = new Date(2013, 04, 27);
 		savedDate = dts.format(dt);
-		addElement(new Expense("Lidl", 1, 22.25f, savedDate));
+		addElement(new Expense("Lidl", 0, 22.25f, savedDate));
 		dt = new Date(2013, 04, 26);
 		savedDate = dts.format(dt);
-		addElement(new Expense("Cacao-Sampaka", 3, 16.25f, savedDate));
+		addElement(new Expense("Cacao-Sampaka", 2, 16.25f, savedDate));
 		dt = new Date(2013,04, 25);
 		savedDate = dts.format(dt);
-		addElement(new Income("Padres", 4, 50.00f, savedDate));
+		addElement(new Income("Padres", 3, 50.00f, savedDate));
 	}
 	
 	private ArrayList <Element> elementList;

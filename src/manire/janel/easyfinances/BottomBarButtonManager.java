@@ -80,12 +80,17 @@ public class BottomBarButtonManager  {
 					}
 					savedDate = sYear + "-" + sMonth + "-" + sDay;
 				}
+				/**
+				 * cat-1 explanation:
+				 * Index category indexed from 1-?
+				 * Retrieve categories from arraylist 0-?
+				 */
 				if(tb.isChecked()) {
 					ElementManager.getElementManager().addElement(
-							new Income(ocrS, cat, q, savedDate));
+							new Income(ocrS, cat-1, q, savedDate));
 				} else {
 					ElementManager.getElementManager().addElement(
-							new Expense(ocrS, cat, q, savedDate));
+							new Expense(ocrS, cat-1, q, savedDate));
 				}
 				
 				Toast.makeText(activity.getApplicationContext(), "Saved", Toast.LENGTH_SHORT).show();
