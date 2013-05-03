@@ -2,6 +2,7 @@ package manire.janel.easyfinances.elements;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class ElementManager {
@@ -19,18 +20,21 @@ public class ElementManager {
 	@SuppressWarnings("unchecked")
 	private ElementManager() {
 		this.elementList = new ArrayList <Element>();
-		Date dt = new Date(2013, 04, 28);
-		SimpleDateFormat dts = new SimpleDateFormat("yyyy-MM-dd");
-		String savedDate = dts.format(dt);
+		Calendar c = Calendar.getInstance();
+		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+		String savedDate = dt.format(c.getTime());
 		addElement(new Expense("Mercadona", 0, 16.25f, savedDate));
-		dt = new Date(2013, 04, 27);
-		savedDate = dts.format(dt);
+		
+		c.set(2013, 04, 01);
+		savedDate = dt.format(c.getTime());
 		addElement(new Expense("Lidl", 0, 22.25f, savedDate));
-		dt = new Date(2013, 04, 26);
-		savedDate = dts.format(dt);
+		
+		c.set(2013, 04, 01);
+		savedDate = dt.format(c.getTime());
 		addElement(new Expense("Cacao-Sampaka", 2, 16.25f, savedDate));
-		dt = new Date(2013,04, 25);
-		savedDate = dts.format(dt);
+		
+		c.set(2013, 02, 21); 
+		savedDate = dt.format(c.getTime());
 		addElement(new Income("Padres", 3, 50.00f, savedDate));
 	}
 	
