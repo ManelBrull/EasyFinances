@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 public class BasicListItem extends LinearLayout {
 	
 	private Button controlPanelItemButton;
-	private BasicListtemFields fields;
+	private BasicListItemFields fields;
 	
 	/**
 	 * Constructor with context and text to display
@@ -23,7 +23,7 @@ public class BasicListItem extends LinearLayout {
 	 */
 	public BasicListItem(Context context, String str) {
 		super(context);
-		this.fields = new BasicListtemFields(str);
+		this.fields = new BasicListItemFields(str);
 		inicializar();
 	}
 	/**
@@ -34,7 +34,7 @@ public class BasicListItem extends LinearLayout {
 	 */
 	public BasicListItem(Context context, String str, int drw) {
 		super(context);
-		this.fields = new BasicListtemFields(str, drw);
+		this.fields = new BasicListItemFields(str, drw);
 		inicializar();
 	}
 	
@@ -43,9 +43,9 @@ public class BasicListItem extends LinearLayout {
 	 * @param context
 	 * @param ele
 	 */
-	public BasicListItem(Context context, BasicListtemFields ele){
+	public BasicListItem(Context context, BasicListItemFields ele){
 		super(context);
-		this.fields = new BasicListtemFields(ele.getText(), ele.getDrawable());
+		this.fields = new BasicListItemFields(ele.getText(), ele.getDrawable());
 		inicializar();
 	}
 	
@@ -66,10 +66,10 @@ public class BasicListItem extends LinearLayout {
 	public void setControlPanelItemButton(Button controlPanelItemButton) {
 		this.controlPanelItemButton = controlPanelItemButton;
 	}
-	public BasicListtemFields getFields() {
+	public BasicListItemFields getFields() {
 		return fields;
 	}
-	public void setFields(BasicListtemFields fields) {
+	public void setFields(BasicListItemFields fields) {
 		this.fields = fields;
 	}
 	

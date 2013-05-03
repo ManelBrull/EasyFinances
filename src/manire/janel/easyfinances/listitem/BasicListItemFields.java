@@ -4,11 +4,11 @@ package manire.janel.easyfinances.listitem;
  * @author Manel Brull
  *
  */
-public class BasicListtemFields {
+public class BasicListItemFields {
 	private String text;
 	private int drawable;
 	
-	public BasicListtemFields(){
+	public BasicListItemFields(){
 		this.setText("");
 		this.setDrawable(-1);
 	}
@@ -16,7 +16,7 @@ public class BasicListtemFields {
 	 * Constructor only with the text parameter
 	 * @param txt String with the text is going to be shown
 	 */
-	public BasicListtemFields(String txt) {
+	public BasicListItemFields(String txt) {
 		this.setText(txt);
 		this.setDrawable(-1);
 	}
@@ -26,7 +26,7 @@ public class BasicListtemFields {
 	 * @param txt String with the text is going to be shown
 	 * @param drw Resource to be drawn
 	 */
-	public BasicListtemFields(String txt, int drw) {
+	public BasicListItemFields(String txt, int drw) {
 		this.setText(txt);
 		this.setDrawable(drw);
 	}
