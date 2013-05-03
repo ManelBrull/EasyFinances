@@ -1,5 +1,8 @@
 package manire.janel.easyfinances.controlpanel.totalexpenses;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import manire.janel.easyfinances.R;
 import manire.janel.easyfinances.R.layout;
 import manire.janel.easyfinances.R.menu;
@@ -33,37 +36,53 @@ public class TotalExpensesActivity extends Activity {
 	}
 
 	public void controlPanelButtonHandler(View v) {
-	    //get the row the clicked button is in
+		//get the row the clicked button is in
 		LinearLayout vwParentRow = (LinearLayout)v.getParent();
-	 	
-	    Button btnChild = (Button)vwParentRow.getChildAt(0);
-	    String buttonClicked = btnChild.getText().toString();
-	    
-	    String show = "0";
-	    
-//	    if(buttonClicked == "Last Movements"){
-	    	// do stuff
-	    
-	  /*  if(buttonClicked == this.totalExpenses){
-	    	// do stuff
-	    	show = "2";
-	    }
-	    if(buttonClicked == this.graphs){
-	    	// do stuff
-	    	show = "3";
-	    }
-	    if(buttonClicked == this.customize){
-	    	// do stuff
-	    	show = "4";
-	    }
-	    if(buttonClicked == this.settings){
-	    	// do stuff
-	    	show = "5";
-	    }
-	    */
-	    Toast.makeText(getApplicationContext(), show, Toast.LENGTH_LONG).show();
+
+		Button btnChild = (Button)vwParentRow.getChildAt(0);
+		String buttonClicked = btnChild.getText().toString();
+
+		if(buttonClicked == "Total"){
+			if (ElementManager.getElementManager().getElementList().size() == 0){
+				Toast.makeText(getApplicationContext(), "Total = 0", Toast.LENGTH_SHORT).show();
+			}
+			else {
+				double total = 0.00f;
+				for(int i = 0; i < ElementManager.getElementManager().getElementList().size(); i++){
+					total += ElementManager.getElementManager().getElement(i).getQuantity();
+				}
+				Toast.makeText(getApplicationContext(), "Total = " + String.valueOf(total), Toast.LENGTH_SHORT).show();
+			}
+		}
+
+		if(buttonClicked == "Divided By Categories"){
+
+		}
+		if(buttonClicked == "Today"){
+			if (ElementManager.getElementManager().getElementList().size() == 0){
+				Toast.makeText(getApplicationContext(), "Total = 0", Toast.LENGTH_SHORT).show();
+			}
+			else {
+				double today = 0.00f;
+				Calendar c = Calendar.getInstance();
+				SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+				String savedDate = dt.format(c.getTime());
+				
+				for(int i = 0; i < ElementManager.getElementManager().getElementList().size(); i++){
+					if(ElementManager.getElementManager().getElement(i).getDate().equals(savedDate)){
+						today += ElementManager.getElementManager().getElement(i).getQuantity();
+					}
+				}
+				Toast.makeText(getApplicationContext(), "Today = " + String.valueOf(today), Toast.LENGTH_SHORT).show();
+			}
+		}
+		if(buttonClicked == "Weekly"){
+
+		}
+		if(buttonClicked == "Monthly"){
+
+		}
 		vwParentRow.refreshDrawableState();
-	    
 	}
 	
 	@Override
