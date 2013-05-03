@@ -948,7 +948,7 @@ containing a value of this type.
     public static final class id {
         public static final int LastMovementItemDate=0x7f04003d;
         public static final int LastMovementItemImage=0x7f04003c;
-        public static final int Menu_settings=0x7f040042;
+        public static final int Menu_settings=0x7f040043;
         public static final int abs__action_bar=0x7f040020;
         public static final int abs__action_bar_container=0x7f04001f;
         public static final int abs__action_bar_subtitle=0x7f040011;
@@ -988,7 +988,7 @@ containing a value of this type.
         public static final int abs__textButton=0x7f040013;
         public static final int abs__title=0x7f04001b;
         public static final int abs__up=0x7f04000b;
-        public static final int action_settings=0x7f040043;
+        public static final int action_settings=0x7f040044;
         public static final int catSpinnerImg=0x7f040040;
         public static final int catSpinnerText=0x7f040041;
         public static final int clearButton=0x7f040038;
@@ -1012,6 +1012,7 @@ containing a value of this type.
         public static final int showTitle=0x7f040007;
         public static final int spinnercatselect=0x7f040033;
         public static final int tabMode=0x7f040003;
+        public static final int total_expenses_options=0x7f040042;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -1049,7 +1050,7 @@ containing a value of this type.
         public static final int sherlock_spinner_dropdown_item=0x7f03001b;
         public static final int sherlock_spinner_item=0x7f03001c;
         public static final int spinner_categories=0x7f03001d;
-        public static final int total_expenses_activity=0x7f03001e;
+        public static final int total_expenses_layout=0x7f03001e;
     }
     public static final class menu {
         public static final int add_expense_simple=0x7f0b0000;

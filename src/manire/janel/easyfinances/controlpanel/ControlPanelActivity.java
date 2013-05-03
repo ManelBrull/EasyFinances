@@ -2,6 +2,7 @@ package manire.janel.easyfinances.controlpanel;
 
 import manire.janel.easyfinances.R;
 import manire.janel.easyfinances.controlpanel.lastmovements.LastMovementsActivity;
+import manire.janel.easyfinances.controlpanel.totalexpenses.TotalExpensesActivity;
 import manire.janel.easyfinances.elements.ElementManager;
 import android.app.Activity;
 import android.content.Intent;
@@ -43,7 +44,6 @@ public class ControlPanelActivity extends Activity {
 	    //String show = "0";
 	    
 	    if(buttonClicked == "Last Movements"){
-	    	// do stuff
 	    	if (ElementManager.getElementManager().getElementList().size() == 0){
 	    		Toast.makeText(getApplicationContext(), "No movements to show", Toast.LENGTH_SHORT).show();
 	    	}
@@ -52,11 +52,16 @@ public class ControlPanelActivity extends Activity {
 	    		startActivity(i);
 	    	}
 	    }
-	  /*  if(buttonClicked == this.totalExpenses){
-	    	// do stuff
-	    	show = "2";
+	    if(buttonClicked == "Total Expenses"){
+	    	if (ElementManager.getElementManager().getElementList().size() == 0){
+	    		Toast.makeText(getApplicationContext(), "No movements to show", Toast.LENGTH_SHORT).show();
+	    	}
+	    	else {
+	    		Intent i = new Intent(this, TotalExpensesActivity.class);
+	    		startActivity(i);
+	    	}
 	    }
-	    if(buttonClicked == this.graphs){
+	  /*  if(buttonClicked == this.graphs){
 	    	// do stuff
 	    	show = "3";
 	    }
