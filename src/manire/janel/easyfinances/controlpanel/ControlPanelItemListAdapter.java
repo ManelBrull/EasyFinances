@@ -2,6 +2,8 @@ package manire.janel.easyfinances.controlpanel;
 
 import java.util.ArrayList;
 
+import manire.janel.easyfinances.listitem.BasicListItem;
+
 import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +41,7 @@ public class ControlPanelItemListAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
-		ControlPanelItem cpil = new ControlPanelItem(this.activity,
+		BasicListItem cpil = new BasicListItem(this.activity,
 				ControlPanelItemsManager.getControlPanelItemsManager().getControlPanelItemFields(position));
 		return cpil;
 	}

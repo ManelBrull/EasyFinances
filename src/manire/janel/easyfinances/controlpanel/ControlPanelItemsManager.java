@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import manire.janel.easyfinances.R;
 import manire.janel.easyfinances.category.CategoriesManager;
 import manire.janel.easyfinances.category.Category;
+import manire.janel.easyfinances.listitem.BasicListItemFields;
 
 public class ControlPanelItemsManager {
 		/*		Singleton		*/
@@ -22,33 +23,33 @@ public class ControlPanelItemsManager {
 		private ControlPanelItemsManager() {
 			//this.setControlPanelItemList((ArrayList<ControlPanelItems>) Utils.getObjectFromSharedPreferences("controlPanelItems"));
 			//if(this.controlPanelItemsManager == null) {
-				this.setControlPanelItemListFields(new ArrayList<ControlPanelItemFields>());
-				this.addControlPanelItemFields(new ControlPanelItemFields("Last Movements"));
-				this.addControlPanelItemFields(new ControlPanelItemFields("Total Expenses"));
-				this.addControlPanelItemFields(new ControlPanelItemFields("Graphs"));
-				this.addControlPanelItemFields(new ControlPanelItemFields("Customize"));
-				this.addControlPanelItemFields(new ControlPanelItemFields("Settings"));
+				this.setControlPanelItemListFields(new ArrayList<BasicListItemFields>());
+				this.addControlPanelItemFields(new BasicListItemFields("Last Movements"));
+				this.addControlPanelItemFields(new BasicListItemFields("Total Expenses"));
+				this.addControlPanelItemFields(new BasicListItemFields("Graphs"));
+				this.addControlPanelItemFields(new BasicListItemFields("Customize"));
+				this.addControlPanelItemFields(new BasicListItemFields("Settings"));
 			}
 		//}
 		
 		/*		END SINGLETON		*/
 		
-		private ArrayList <ControlPanelItemFields> controlPanelItemListFields;
+		private ArrayList <BasicListItemFields> controlPanelItemListFields;
 		
 		
-		public ControlPanelItemFields getControlPanelItemFields(int position){
+		public BasicListItemFields getControlPanelItemFields(int position){
 			return this.controlPanelItemListFields.get(position);
 		}
 		
-		public void addControlPanelItemFields(ControlPanelItemFields cpi) {
+		public void addControlPanelItemFields(BasicListItemFields cpi) {
 			this.controlPanelItemListFields.add(cpi);
 		}
 		
-		public ArrayList <ControlPanelItemFields> getControlPanelItemListFields() {
+		public ArrayList <BasicListItemFields> getControlPanelItemListFields() {
 			return controlPanelItemListFields;
 		}
 
-		public void setControlPanelItemListFields(ArrayList <ControlPanelItemFields> controlPanelItemListFields) {
+		public void setControlPanelItemListFields(ArrayList <BasicListItemFields> controlPanelItemListFields) {
 			this.controlPanelItemListFields = controlPanelItemListFields;
 		}
 		
