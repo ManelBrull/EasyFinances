@@ -61,25 +61,8 @@ public class BottomBarButtonManager  {
 				float q = Float.parseFloat(quantity.getText().toString());
 				//Expense / Income
 				ToggleButton tb = (ToggleButton) activity.findViewById(R.id.income_expense_button);
-				
-				String savedDate ="";
-				if( year < 0 || month < 0 || day < 0){
-					Calendar c = Calendar.getInstance();
-					SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-					savedDate = dt.format(c.getTime());
-				}
-				else {
-					String sYear = String.valueOf(year);
-					String sMonth = String.valueOf(month);
-					String sDay = String.valueOf(day);
-					if(month > 0 && month < 10) {
-						sMonth = "0" + String.valueOf(month);
-					}
-					if(day > 0 && day < 10){
-						sDay = "0" + String.valueOf(day);
-					}
-					savedDate = sYear + "-" + sMonth + "-" + sDay;
-				}
+				Calendar c = Calendar.getInstance();
+				long savedDate = c.getTimeInMillis();
 				/**
 				 * cat-1 explanation:
 				 * Index category indexed from 1-?

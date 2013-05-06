@@ -9,6 +9,7 @@ import manire.janel.easyfinances.R.menu;
 import manire.janel.easyfinances.controlpanel.ControlPanelItemListAdapter;
 import manire.janel.easyfinances.controlpanel.lastmovements.LastMovementsActivity;
 import manire.janel.easyfinances.elements.ElementManager;
+import manire.janel.easyfinances.utils.MyTimeMiliseconds;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -65,11 +66,10 @@ public class TotalExpensesActivity extends Activity {
 			else {
 				double today = 0.00f;
 				Calendar c = Calendar.getInstance();
-				SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-				String savedDate = dt.format(c.getTime());
+				long time = c.getTimeInMillis()-MyTimeMiliseconds.DAY;
 				
 				for(int i = 0; i < ElementManager.getElementManager().getElementList().size(); i++){
-					if(ElementManager.getElementManager().getElement(i).getDate().equals(savedDate)){
+					if(ElementManager.getElementManager().getElement(i).getDate()>=time){
 						today += ElementManager.getElementManager().getElement(i).getQuantity();
 					}
 				}
@@ -77,9 +77,38 @@ public class TotalExpensesActivity extends Activity {
 			}
 		}
 		if(buttonClicked == "Weekly"){
-
+			if (ElementManager.getElementManager().getElementList().size() == 0){
+				Toast.makeText(getApplicationContext(), "Total = 0", Toast.LENGTH_SHORT).show();
+			}
+			else {
+				double week = 0.00f;
+				Calendar c = Calendar.getInstance();
+				long time = c.getTimeInMillis()-MyTimeMiliseconds.WEEK;
+				
+				for(int i = 0; i < ElementManager.getElementManager().getElementList().size(); i++){
+					if(ElementManager.getElementManager().getElement(i).getDate()>time){
+						week += ElementManager.getElementManager().getElement(i).getQuantity();
+					}
+				}
+				Toast.makeText(getApplicationContext(), "Past Week = " + String.valueOf(week), Toast.LENGTH_SHORT).show();
+			}
 		}
 		if(buttonClicked == "Monthly"){
+			if (ElementManager.getElementManager().getElementList().size() == 0){
+				Toast.makeText(getApplicationContext(), "Total = 0", Toast.LENGTH_SHORT).show();
+			}
+			else {
+				double month = 0.00f;
+				Calendar c = Calendar.getInstance();
+				long time = c.getTimeInMillis()-MyTimeMiliseconds.MONTH;
+				
+				for(int i = 0; i < ElementManager.getElementManager().getElementList().size(); i++){
+					if( ElementManager.getElementManager().getElement(i).getDate() >= time ){
+						month += ElementManager.getElementManager().getElement(i).getQuantity();
+					}
+				}
+				Toast.makeText(getApplicationContext(), "Past Month = " + String.valueOf(month), Toast.LENGTH_SHORT).show();
+			}
 
 		}
 		vwParentRow.refreshDrawableState();

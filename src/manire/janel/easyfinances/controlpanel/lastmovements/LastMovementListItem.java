@@ -29,7 +29,7 @@ public class LastMovementListItem extends LinearLayout {
 		this.date = (TextView) findViewById(R.id.LastMovementItemDate);
 		String dateText ="";
 		if(seeDate){
-			dateText = ElementManager.getElementManager().getElement(position).getDate();
+			dateText = ElementManager.getElementManager().getElement(position).getFormattedDate();
 		}
 		else {
 			dateText = ElementManager.getElementManager().getElement(position).getOcr();

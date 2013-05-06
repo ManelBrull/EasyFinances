@@ -21,21 +21,17 @@ public class ElementManager {
 	private ElementManager() {
 		this.elementList = new ArrayList <Element>();
 		Calendar c = Calendar.getInstance();
-		SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-		String savedDate = dt.format(c.getTime());
-		addElement(new Expense("Mercadona", 0, 16.25f, savedDate));
+
+		addElement(new Expense("Mercadona", 0, 16.25f, c.getTimeInMillis()));
+		
+		c.set(2013, 04, 04);
+		addElement(new Expense("Lidl", 0, 22.25f, c.getTimeInMillis()));
 		
 		c.set(2013, 04, 01);
-		savedDate = dt.format(c.getTime());
-		addElement(new Expense("Lidl", 0, 22.25f, savedDate));
-		
-		c.set(2013, 04, 01);
-		savedDate = dt.format(c.getTime());
-		addElement(new Expense("Cacao-Sampaka", 2, 16.25f, savedDate));
+		addElement(new Expense("Cacao-Sampaka", 2, 16.25f, c.getTimeInMillis()));
 		
 		c.set(2013, 02, 21); 
-		savedDate = dt.format(c.getTime());
-		addElement(new Income("Padres", 3, 50.00f, savedDate));
+		addElement(new Income("Padres", 3, 50.00f, c.getTimeInMillis()));
 	}
 	
 	private ArrayList <Element> elementList;
