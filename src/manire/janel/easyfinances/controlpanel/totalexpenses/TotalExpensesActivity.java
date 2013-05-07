@@ -8,6 +8,7 @@ import manire.janel.easyfinances.R.layout;
 import manire.janel.easyfinances.R.menu;
 import manire.janel.easyfinances.controlpanel.ControlPanelItemListAdapter;
 import manire.janel.easyfinances.controlpanel.lastmovements.LastMovementsActivity;
+import manire.janel.easyfinances.controlpanel.totalexpenses.dividedbycategories.TotalExpensesCategoriesActivity;
 import manire.janel.easyfinances.elements.ElementManager;
 import manire.janel.easyfinances.utils.MyTimeMiliseconds;
 import android.os.Bundle;
@@ -55,9 +56,9 @@ public class TotalExpensesActivity extends Activity {
 				Toast.makeText(getApplicationContext(), "Total = " + String.valueOf(total), Toast.LENGTH_SHORT).show();
 			}
 		}
-
 		if(buttonClicked == "Divided By Categories"){
-
+			Intent i = new Intent(this,TotalExpensesCategoriesActivity.class);
+			startActivity(i);
 		}
 		if(buttonClicked == "Today"){
 			if (ElementManager.getElementManager().getElementList().size() == 0){

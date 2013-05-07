@@ -15,5 +15,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_last_movements">LastMovementsActivity</string>
     <string name="title_activity_total_expenses">TotalExpenses</string>
+    <string name="title_activity_total_expenses_categories">TotalExpensesCategories</string>
 
 </resources>

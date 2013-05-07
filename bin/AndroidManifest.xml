@@ -40,6 +40,10 @@
             android:name="manire.janel.easyfinances.controlpanel.totalexpenses.TotalExpensesActivity"
             android:label="@string/title_activity_total_expenses" >
         </activity>
+        <activity
+            android:name="manire.janel.easyfinances.controlpanel.totalexpenses.dividedbycategories.TotalExpensesCategoriesActivity"
+            android:label="@string/title_activity_total_expenses_categories" >
+        </activity>
     </application>
 
 </manifest>
